@@ -1177,7 +1177,7 @@
         if (correctCount === targetLetters.length) {
           feedbackEl.innerHTML = `<div class="perfect-banner">✨ PERFECT! ✨</div>`;
         } else {
-          feedbackEl.innerHTML = `<div class="correct-answer-banner">CORRECT ANSWER: ${currentQ.sentence}</div>`;
+          feedbackEl.innerHTML = `<div class="correct-answer-banner">${currentQ.sentence}</div>`;
         }
 
         box.querySelector(".action-area").innerHTML = `
@@ -1201,7 +1201,7 @@
       function startTimer(teamId) {
         if (intervals[teamId]) clearInterval(intervals[teamId]);
 
-        let totalTime = 30;
+        let totalTime = 25;
         let timeLeft = totalTime;
         const box = document.getElementById(teamId);
         const timerDisplay = box.querySelector(".timer-text");
